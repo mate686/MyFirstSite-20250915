@@ -17,3 +17,13 @@ Route::get('/valami', function () {
 Route::get('/contact', function () {
     return view("contact");
 });
+
+Route:: view('/contact','contact');
+
+Route::get('/tomb-visszaad', function(){
+    return ["kulcs" => "ertek"];
+});
+
+/*Route::get('tomb-viszza', function () {
+    return ["kulcs" => "eretek"];
+});*/
