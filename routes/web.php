@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -51,3 +52,20 @@ Route::get("/felhasznaloiadat", function(){
     "knev" => request("keresztn")
     ]);
 });
+
+
+Route::get('/posts/{post}',function($post){
+    $posts = [
+        'first' => 'Elsö blogbejegyzés  tartalma',
+        'second' => 'Második blogbejegyzés  tartalma',
+    ];
+
+    return view('postnezet',[
+        'postcim' => $posts[$post] ?? "Nincs ilyen blogbejegyzés    "
+    ]);
+});
+
+Route::get("vezerlo/{post}",[PostController::class,
+'show'
+
+]);
