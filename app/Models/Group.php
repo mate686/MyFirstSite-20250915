@@ -9,9 +9,9 @@ class Group extends Model
     public static function csoportlista(){
 
         return[
-            "tanulo1" => "Máté",
-            "tanulo2" => "Dávid",
-            "tanulo3" => "Erik"
+            "Máté",
+            "Dávid",
+            "Erik"
         ];
     }
 }
